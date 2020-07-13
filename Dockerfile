@@ -1,5 +1,7 @@
 FROM golang:1.12.7-alpine3.10 AS build
 # Support CGO and SSL
+
+ENV GO111MODULE=on
 RUN apk --no-cache add gcc g++ make
 RUN apk add git
 WORKDIR /go/src/app
