@@ -1,5 +1,4 @@
-FROM golang:alpine AS builder
-
+FROM golang:1.12.7-alpine3.10 AS build
 # Support CGO and SSL
 RUN apk --no-cache add gcc g++ make
 RUN apk add git
